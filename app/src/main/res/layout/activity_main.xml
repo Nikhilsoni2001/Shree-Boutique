@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <ImageView
+        android:layout_width="420dp"
+        android:layout_height="92dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_wavetop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="true"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCustomers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MaterialButtonStyle"
+        android:text="@string/customers"
+        app:layout_constraintBottom_toTopOf="@id/btnBookings"
+        app:layout_constraintEnd_toEndOf="@+id/btnBookings"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnBookings"
+        app:layout_constraintTop_toBottomOf="@id/app_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBookings"
+        android:layout_width="128dp"
+        android:layout_height="71dp"
+        style="@style/MaterialButtonStyle"
+        android:text="@string/bookings"
+        app:layout_constraintBottom_toTopOf="@id/btnEmployees"
+        app:layout_constraintEnd_toEndOf="@+id/btnEmployees"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnEmployees"
+        app:layout_constraintTop_toBottomOf="@id/btnCustomers" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEmployees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MaterialButtonStyle"
+        android:text="@string/employees"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBookings" />
+
+    <ImageView
+        android:layout_width="420dp"
+        android:layout_height="92dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_wavebase"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnEmployees"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
