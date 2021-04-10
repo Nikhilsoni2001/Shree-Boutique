@@ -19,11 +19,11 @@ class MainActivity : AppCompatActivity() {
         initializing()
 
         btnCustomers.setOnClickListener {
-            startActivity(Intent(this@MainActivity, Customers::class.java))
+            startActivity(Intent(this@MainActivity, Customer::class.java))
         }
 
         btnBookings.setOnClickListener {
-            startActivity(Intent(this@MainActivity, Bookings::class.java))
+            startActivity(Intent(this@MainActivity, Booking::class.java))
         }
 
         btnEmployees.setOnClickListener {

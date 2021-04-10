@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShreeBoutique">
-        <activity android:name=".activity.Bookings"></activity>
+        <activity android:name=".activity.Customer"></activity>
         <activity android:name=".activity.Employees" />
-        <activity android:name=".activity.Customers" />
+        <activity android:name=".activity.Booking" />
         <activity android:name=".activity.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
