@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.NewemployeeFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_newEmployee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_medium"
+        android:padding="12dp"
+        android:text="New Emloyee"
+        android:textAlignment="center"
+        android:textColor="@color/main_color"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/tv_Date2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Date"
+        android:textColor="@color/main_color"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ib_datePicker2"
+        android:layout_width="39dp"
+        android:layout_height="41dp"
+        android:elevation="10dp"
+        app:backgroundTint="@color/main_color"
+        app:icon="@drawable/ic_baseline_calendar_today_24"
+        app:iconGravity="textStart"
+        app:iconPadding="1dp"
+        app:iconTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/ev_position"
+
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintLeft_toRightOf="@id/tv_Date"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_name"
+        app:layout_constraintVertical_bias="0.491"
+        app:rippleColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_Date"
+        android:layout_width="201dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:hint="DD/MM/YYYY"
+        android:padding="6dp"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintLeft_toRightOf="@id/tv_Date2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_name" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="@string/name"
+        android:textColor="@color/main_color"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_newEmployee" />
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="248dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:hint="Employee Name"
+        android:padding="6dp"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_newEmployee" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Add"
+        app:backgroundTint="@color/main_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintVertical_bias="0.88" />
+
+    <TextView
+        android:id="@+id/tv_Salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Salary"
+        android:textColor="@color/main_color"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_position" />
+
+    <EditText
+        android:id="@+id/et_Esalary"
+        android:layout_width="248dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:hint="Salary"
+        android:padding="6dp"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_Salary"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ev_position"
+        android:numeric="integer" />
+
+    <TextView
+        android:id="@+id/tv_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Position"
+        android:textColor="@color/main_color"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Date" />
+
+    <EditText
+        android:id="@+id/ev_position"
+        android:layout_width="248dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:hint="Position"
+        android:padding="6dp"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_Salary"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Date" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
