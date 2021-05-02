@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|bottom"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.CustomerBottomFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_back"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_length"
+            app:layout_constraintEnd_toStartOf="@+id/tv_salwarPlazo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.41000003"
+            app:tint="@color/main_color" />
+
+        <TextView
+            android:id="@+id/tv_salwarPlazo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/salwar_plazo_heading"
+            style="@style/CustomTextStyle"
+            android:layout_margin="22dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="38dp"
+            android:includeFontPadding="false"
+            android:text="@string/length"
+            style="@style/CustomTextStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_salwarPlazo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/et_length"/>
+
+        <EditText
+            android:id="@+id/et_length"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:maxLines="1"
+            android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintLeft_toRightOf="@id/tv_length"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_salwarPlazo"
+            android:autofillHints="false" />
+
+        <TextView
+            android:id="@+id/tv_pauncha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="38dp"
+            android:includeFontPadding="false"
+            android:text="@string/pauncha"
+            style="@style/CustomTextStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_length"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/et_pauncha"/>
+
+        <EditText
+            android:id="@+id/et_pauncha"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:maxLines="1"
+            android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintLeft_toRightOf="@id/tv_pauncha"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_length"
+            android:autofillHints="false" />
+
+        <TextView
+            android:id="@+id/tv_assan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="38dp"
+            android:includeFontPadding="false"
+            android:text="@string/assan"
+            style="@style/CustomTextStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_pauncha"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/et_assan"/>
+
+        <EditText
+            android:id="@+id/et_assan"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:maxLines="1"
+            android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintLeft_toRightOf="@id/tv_assan"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pauncha"
+            android:autofillHints="false" />
+
+        <TextView
+            android:id="@+id/tv_belt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="38dp"
+            android:includeFontPadding="false"
+            android:text="@string/belt"
+            style="@style/CustomTextStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_assan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/et_belt"/>
+
+        <EditText
+            android:id="@+id/et_belt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:maxLines="1"
+            android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintLeft_toRightOf="@id/tv_belt"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_assan"
+            android:autofillHints="false" />
+
+        <TextView
+            android:id="@+id/tv_thies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="38dp"
+            android:includeFontPadding="false"
+            android:text="@string/thies"
+            style="@style/CustomTextStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_belt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/et_thies"/>
+
+        <EditText
+            android:id="@+id/et_thies"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:imeOptions="actionDone"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:maxLines="1"
+            android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintLeft_toRightOf="@id/tv_thies"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_belt"
+            android:autofillHints="false" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/MaterialButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/save"
+        android:layout_gravity="bottom"/>
+
+</LinearLayout>

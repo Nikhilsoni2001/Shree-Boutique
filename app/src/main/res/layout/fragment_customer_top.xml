@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragment.CustomerTopFragment">
+    <TextView
+        android:id="@+id/tv_shirtSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/shirt_size"
+        android:textColor="@color/main_color"
+        android:textSize="26sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_teraFront"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/tera_front"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_teraFront"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:layout_marginStart="8dp"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toEndOf="@+id/tv_teraFront"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_teraBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/tera_back"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_teraFront" />
+
+    <EditText
+        android:id="@+id/et_teraBack"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toEndOf="@+id/tv_teraBack"
+        app:layout_constraintTop_toBottomOf="@+id/et_teraFront" />
+
+    <TextView
+        android:id="@+id/tv_glaFront"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/gla_front"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_teraBack" />
+
+    <EditText
+        android:id="@+id/et_glaFront"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintLeft_toRightOf="@id/tv_glaFront"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_teraBack" />
+
+    <TextView
+        android:id="@+id/tv_glaBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/gla_back"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_glaFront" />
+
+    <EditText
+        android:id="@+id/et_glaBack"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintLeft_toRightOf="@id/tv_glaBack"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_glaFront" />
+
+    <TextView
+        android:id="@+id/tv_shoulder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/shoulder"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_glaBack" />
+
+    <EditText
+        android:id="@+id/et_shoulder"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintLeft_toRightOf="@id/tv_shoulder"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_glaBack" />
+    <TextView
+        android:id="@+id/tv_upperChest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/upper_chest"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_shoulder" />
+
+    <EditText
+        android:id="@+id/et_upperChest"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintLeft_toRightOf="@id/tv_upperChest"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_shoulder"
+        android:autofillHints="false" />
+
+    <TextView
+        android:id="@+id/tv_chest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/chest"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_upperChest" />
+
+    <EditText
+        android:id="@+id/et_chest"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintLeft_toRightOf="@id/tv_chest"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_upperChest" />
+
+    <TextView
+        android:id="@+id/tv_underChest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/under_chest"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_chest" />
+
+    <EditText
+        android:id="@+id/et_underChest"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintLeft_toRightOf="@id/tv_underChest"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_chest" />
+
+    <TextView
+        android:id="@+id/tv_kamar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/kamar"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_underChest" />
+
+    <EditText
+        android:id="@+id/et_kamar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintLeft_toRightOf="@id/tv_kamar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_underChest" />
+
+    <TextView
+        android:id="@+id/tv_hip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/hip"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_kamar" />
+
+    <EditText
+        android:id="@+id/et_hip"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintLeft_toRightOf="@id/tv_hip"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_kamar" />
+
+    <TextView
+        android:id="@+id/tv_ghera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/ghera"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_hip" />
+
+    <EditText
+        android:id="@+id/et_ghera"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintLeft_toRightOf="@id/tv_ghera"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_hip" />
+
+    <TextView
+        android:id="@+id/tv_armLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/arm_length"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ghera" />
+
+    <EditText
+        android:id="@+id/et_armLength"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintLeft_toRightOf="@id/tv_armLength"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_ghera" />
+
+    <TextView
+        android:id="@+id/tv_armFront"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/arm_front"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_armLength" />
+
+    <EditText
+        android:id="@+id/et_armFront"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintLeft_toRightOf="@id/tv_armFront"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_armLength" />
+
+    <TextView
+        android:id="@+id/tv_fullLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/full_length"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_armFront" />
+
+    <EditText
+        android:id="@+id/et_fullLength"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:maxLines="1"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintLeft_toRightOf="@id/tv_fullLength"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_armFront"
+        android:autofillHints="false" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+<com.google.android.material.button.MaterialButton
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/next"
+    style="@style/MaterialButtonStyle"/>
+</LinearLayout>

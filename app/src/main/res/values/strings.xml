@@ -8,5 +8,32 @@
     <string name="name">Name</string>
     <string name="mobile_no">Mobile No</string>
     <string name="datePicker">Pick your Date</string>
+    <string name="nameHint">Katrina Kaif</string>
+    <string name="contactHint">7888980158</string>
+    <string name="contact_no">Contact No</string>
+    <string name="shirt_size">Shirt Size</string>
+    <string name="tera_front">Tera Front</string>
+    <string name="tera_back">Tera Back</string>
+    <string name="gla_front">Gla Front</string>
+    <string name="gla_back">Gla Back</string>
+    <string name="shoulder">Shoulder</string>
+    <string name="upper_chest">Upper Chest</string>
+    <string name="chest">Chest</string>
+    <string name="under_chest">Under Chest</string>
+    <string name="kamar">Kamar</string>
+    <string name="hip">Hip</string>
+    <string name="full_length">Full Length</string>
+    <string name="arm_front">Arm Front</string>
+    <string name="arm_length">Arm Length</string>
+    <string name="ghera">Ghera</string>
+    <string name="no_bookings">Sorry you have no Bookings</string>
+    <string name="salwar_plazo_heading">Salwar / Plazo</string>
+    <string name="length">Length</string>
+    <string name="pauncha">Pauncha</string>
+    <string name="assan">Assan</string>
+    <string name="belt">Belt</string>
+    <string name="thies">Thies</string>
+    <string name="save">Save</string>
+    <string name="next">Next</string>
 
 </resources>

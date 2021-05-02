@@ -12,13 +12,16 @@
         <activity android:name=".activity.Customer" android:windowSoftInputMode="adjustPan"></activity>
         <activity android:name=".activity.Employees" android:windowSoftInputMode="adjustPan" />
         <activity android:name=".activity.Booking" android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".activity.SplashScreen"> <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".activity.SplashScreen">
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 </manifest>

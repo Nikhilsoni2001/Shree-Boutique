@@ -1,121 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="4dp"
     tools:context=".fragment.CustomersFragment">
 
     <TextView
         android:id="@+id/tvCustomers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:text="@string/customers"
         android:textColor="@color/main_color"
+        android:layout_margin="8dp"
         android:textSize="32sp"
-        android:textStyle="bold" />
-
-    <View
-        android:id="@+id/dividerTop"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/tvCustomers"
-        android:layout_marginBottom="6dp"
-        android:background="@android:color/darker_gray" />
-
-    <LinearLayout
-        android:id="@+id/llCustomerInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dividerTop"
-        android:layout_margin="16dp"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <TextView
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+        <TextView
+                android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:includeFontPadding="false"
                 android:text="@string/name"
-                android:textSize="20sp" />
+                android:textColor="@color/main_color"
+                android:textSize="26sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCustomers" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/el_name_customer"
-                style="@style/InputLayoutStyle"
-                android:layout_marginStart="55dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_name_customer"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="@string/name"
-                    android:inputType="textPersonName"
-                    android:maxLines="1" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:hint="@string/nameHint"
+                android:imeOptions="actionNext"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/tvCustomers" />
 
             <TextView
+                android:id="@+id/tv_contactNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/mobile_no"
-                android:textSize="20sp" />
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:includeFontPadding="false"
+                android:text="@string/contact_no"
+                android:textColor="@color/main_color"
+                android:textSize="26sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/elMobile"
-                style="@style/InputLayoutStyle"
-                android:layout_width="match_parent"
+            <EditText
+                android:id="@+id/et_contactNo"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                app:endIconMode="clear_text">
+                android:layout_margin="12dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:hint="@string/contactHint"
+                android:imeOptions="actionNext"
+                android:includeFontPadding="false"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_contactNo"
+                app:layout_constraintTop_toBottomOf="@id/et_name" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_mobile"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="@string/mobile_no"
-                    android:inputType="phone"
-                    android:maxLength="10"
-                    android:maxLines="1" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
+    <TextView
+        android:id="@+id/tv_AlternativeContactNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="Alt Contact No"
+        android:textColor="@color/main_color"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactNo" />
+
+    <EditText
+        android:id="@+id/et_AlternativeContactNo"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:hint="@string/contactHint"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="false"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_contactNo"
+        app:layout_constraintTop_toBottomOf="@id/et_contactNo" />
 
 
-    </LinearLayout>
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/llCustomerInfo">
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabBackground="@color/main_color"
-            app:tabGravity="fill"
-            app:tabIconTint="@color/white"
-            app:tabInlineLabel="true"
-            app:tabMode="fixed"
-            app:tabTextAppearance="@style/CustomTabStyle"
-            app:tabTextColor="@android:color/white" />
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/appBarLayout" />
-
-</RelativeLayout>
+        android:text="@string/next"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        style="@style/MaterialButtonStyle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
