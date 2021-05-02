@@ -28,8 +28,8 @@
         <item name="boxCornerRadiusTopEnd">16dp</item>
         <item name="errorEnabled">true</item>
     </style>
+
     <style name="CustomTextStyle" parent="Widget.AppCompat.TextView">
-        <item name ="android:fontFamily">@font/ubuntu_bold"</item>
         <item name="android:textColor">@color/main_color</item>
         <item name="android:textSize">26sp</item>
     </style>
