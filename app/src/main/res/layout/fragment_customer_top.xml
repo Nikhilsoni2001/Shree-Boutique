@@ -16,7 +16,6 @@
         android:text="@string/shirt_size"
         android:textColor="@color/main_color"
         android:textSize="26sp" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"

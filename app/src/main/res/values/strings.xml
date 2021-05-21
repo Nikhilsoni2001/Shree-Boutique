@@ -35,5 +35,12 @@
     <string name="thies">Thies</string>
     <string name="save">Save</string>
     <string name="next">Next</string>
+    <string name="date">Date</string>
+    <string name="dateformat">dd/mm/yyyy</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="book">Book</string>
+    <string name="additional_note">Additional Note</string>
+    <string name="note">Note</string>
+    <string name="new_booking">New Booking</string>
 
 </resources>

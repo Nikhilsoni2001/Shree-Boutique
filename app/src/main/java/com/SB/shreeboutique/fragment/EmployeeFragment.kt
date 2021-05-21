@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.SB.shreeboutique.R
-import com.SB.shreeboutique.fragment.BookingsAddFragment
 import com.SB.shreeboutique.fragment.NewemployeeFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 

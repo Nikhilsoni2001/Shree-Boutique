@@ -1,10 +1,12 @@
 package com.SB.shreeboutique.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.SB.shreeboutique.activity.AddBooking
 import com.SB.shreeboutique.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -20,8 +22,8 @@ class BookingsFragment : Fragment(R.layout.fragment_bookings) {
         initialization(view)
 
         fabBooking.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.booking_container,  BookingsAddFragment()).commit()
+            val intent = Intent(activity, AddBooking::class.java)
+            activity?.startActivity(intent)
         }
         return view
 
