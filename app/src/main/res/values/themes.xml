@@ -23,7 +23,9 @@
     </style>
 
     <style name="InputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_margin">12dp</item>
+        <item name="fontFamily">@font/ubuntu_medium</item>
+        <item name="android:layout_marginTop">16dp</item>
         <item name="boxCornerRadiusBottomStart">16dp</item>
         <item name="boxCornerRadiusTopEnd">16dp</item>
         <item name="errorEnabled">true</item>

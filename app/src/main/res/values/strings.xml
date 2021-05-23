@@ -9,7 +9,8 @@
     <string name="mobile_no">Mobile No</string>
     <string name="datePicker">Pick your Date</string>
     <string name="nameHint">Katrina Kaif</string>
-    <string name="contactHint">7888980158</string>
+    <string name="contactHint">Contact</string>
+    <string name="altContactHint">Alt Contact</string>
     <string name="contact_no">Contact No</string>
     <string name="shirt_size">Shirt Size</string>
     <string name="tera_front">Tera Front</string>
@@ -42,5 +43,6 @@
     <string name="additional_note">Additional Note</string>
     <string name="note">Note</string>
     <string name="new_booking">New Booking</string>
+    <string name="alt_contact_no">Alt Contact No</string>
 
 </resources>

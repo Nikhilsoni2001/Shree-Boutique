@@ -4,20 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.ViewPager
 import com.SB.shreeboutique.R
-import com.SB.shreeboutique.adapters.ViewPagerAdapter
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.tabs.TabLayout
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class CustomersFragment : Fragment(R.layout.fragment_customers) {
 
-    lateinit var et_name: EditText
-    lateinit var et_contactNo: EditText
-    lateinit var et_AlternativeContactNo: EditText
-    lateinit var btn_next: MaterialButton
+    private lateinit var el_name: TextInputLayout
+    private lateinit var et_name: TextInputEditText
+    private lateinit var el_contact: TextInputLayout
+    private lateinit var et_contact: TextInputEditText
+    private lateinit var el_AlternativeContact: TextInputLayout
+    private lateinit var et_AlternativeContact: TextInputEditText
+    private lateinit var btn_next: MaterialButton
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,16 +29,30 @@ class CustomersFragment : Fragment(R.layout.fragment_customers) {
         initialization(view)
 
         btn_next.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.container_customer, CustomerTopFragment()).commit()
+
+            if (et_name.text.toString().isNotEmpty()) {
+                if (et_contact.text.toString().isNotEmpty()) {
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.container_customer, CustomerTopFragment()).commit()
+                } else {
+                    el_contact.error = "Please Enter a valid Contact"
+                }
+            } else {
+                el_name.error = "Please Enter a valid Name"
+            }
+
+
         }
         return view
     }
 
     private fun initialization(view: View) {
+        el_name = view.findViewById(R.id.el_name)
         et_name = view.findViewById(R.id.et_name)
-        et_contactNo = view.findViewById(R.id.et_contactNo)
-        et_AlternativeContactNo = view.findViewById(R.id.et_AlternativeContactNo)
+        el_contact = view.findViewById(R.id.el_contact)
+        et_contact = view.findViewById(R.id.et_contact)
+        el_AlternativeContact = view.findViewById(R.id.el_AlternativeContactNo)
+        et_AlternativeContact = view.findViewById(R.id.et_AlternativeContactNo)
         btn_next = view.findViewById(R.id.btn_next)
     }
 
