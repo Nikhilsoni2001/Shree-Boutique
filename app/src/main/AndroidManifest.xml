@@ -13,19 +13,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".activity.AddBooking"></activity>
+        <activity android:name="com.SB.shreeboutique.ui.activity.AddBooking"></activity>
         <activity
-            android:name=".activity.Customer"
+            android:name="com.SB.shreeboutique.ui.activity.Customer"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.Employees"
+            android:name="com.SB.shreeboutique.ui.activity.Employees"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.Booking"
+            android:name="com.SB.shreeboutique.ui.activity.Booking"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".activity.SplashScreen"></activity>
+        <activity android:name="com.SB.shreeboutique.ui.activity.SplashScreen"></activity>
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.SB.shreeboutique.ui.activity.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

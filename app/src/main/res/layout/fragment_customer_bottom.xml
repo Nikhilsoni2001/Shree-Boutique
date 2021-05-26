@@ -6,7 +6,7 @@
     android:gravity="center|bottom"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.CustomerBottomFragment">
+    tools:context=".ui.fragment.CustomerBottomFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

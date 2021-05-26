@@ -1,4 +1,4 @@
-package com.SB.shreeboutique.activity
+package com.SB.shreeboutique.ui.activity
 
 import android.Manifest
 import android.content.Intent

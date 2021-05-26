@@ -1,11 +1,8 @@
-package com.SB.shreeboutique.activity
+package com.SB.shreeboutique.ui.activity
 
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Window
-import android.view.WindowManager
 import com.SB.shreeboutique.R
 import com.google.android.material.button.MaterialButton
 

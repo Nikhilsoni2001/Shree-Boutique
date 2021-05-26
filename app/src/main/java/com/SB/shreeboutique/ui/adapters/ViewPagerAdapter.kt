@@ -1,4 +1,4 @@
-package com.SB.shreeboutique.adapters
+package com.SB.shreeboutique.ui.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

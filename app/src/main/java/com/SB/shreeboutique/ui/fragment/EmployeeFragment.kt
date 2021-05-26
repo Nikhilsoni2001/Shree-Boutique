@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.SB.shreeboutique.R
-import com.SB.shreeboutique.fragment.NewemployeeFragment
+import com.SB.shreeboutique.ui.fragment.NewEmployeeFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class EmployeeFragment : Fragment(R.layout.fragment_employee) {
@@ -21,7 +21,7 @@ class EmployeeFragment : Fragment(R.layout.fragment_employee) {
 
         fabEmployee.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.employee_container,  NewemployeeFragment()).commit()
+                .replace(R.id.employee_container,  NewEmployeeFragment()).commit()
         }
         return view
 

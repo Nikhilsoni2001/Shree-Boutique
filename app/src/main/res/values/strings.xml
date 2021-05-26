@@ -44,5 +44,11 @@
     <string name="note">Note</string>
     <string name="new_booking">New Booking</string>
     <string name="alt_contact_no">Alt Contact No</string>
+    <string name="new_employee">New Employee</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="employee_name">Employee Name</string>
+    <string name="add">Add</string>
+    <string name="salary">Salary</string>
+    <string name="position">Position</string>
 
 </resources>

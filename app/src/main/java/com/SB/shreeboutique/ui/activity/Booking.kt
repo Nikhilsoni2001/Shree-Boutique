@@ -1,9 +1,9 @@
-package com.SB.shreeboutique.activity
+package com.SB.shreeboutique.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.SB.shreeboutique.R
-import com.SB.shreeboutique.fragment.BookingsFragment
+import com.SB.shreeboutique.ui.fragment.BookingsFragment
 
 class Booking : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
