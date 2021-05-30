@@ -42,9 +42,9 @@ class EmployeesAdapter : RecyclerView.Adapter<EmployeesAdapter.EmployeeViewHolde
             holder.tv_position.text = employee.position
             holder.tv_employeeSalary.text = employee.salary.toString()
             holder.tv_employeeDate.text = employee.dateOfJoining
-        }
-        setOnItemClickListener {
-            onItemClickListener?.let { it(employee) }
+            setOnItemClickListener {
+                onItemClickListener?.let { it(employee) }
+            }
         }
     }
 
@@ -53,8 +53,7 @@ class EmployeesAdapter : RecyclerView.Adapter<EmployeesAdapter.EmployeeViewHolde
     }
 
     private var onItemClickListener: ((Employee) -> Unit)? = null
-
     fun setOnItemClickListener(listener: (Employee) -> Unit) {
-        onItemClickListener = listener
+        listener.also { onItemClickListener = it }
     }
 }

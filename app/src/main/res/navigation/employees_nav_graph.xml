@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/employees_nav_graph"
+    app:startDestination="@id/employeeFragment">
+
+    <fragment
+        android:id="@+id/employeeFragment"
+        android:name="com.SB.shreeboutique.ui.fragment.employees.EmployeeFragment"
+        android:label="EmployeeFragment"
+        tools:layout="@layout/fragment_employee">
+        <action
+            android:id="@+id/action_employeeFragment_to_newEmployeeFragment"
+            app:destination="@id/newEmployeeFragment" />
+        <action
+            android:id="@+id/action_employeeFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newEmployeeFragment"
+        android:name="com.SB.shreeboutique.ui.fragment.employees.NewEmployeeFragment"
+        android:label="fragment_newemployee"
+        tools:layout="@layout/fragment_newemployee" >
+        <action
+            android:id="@+id/action_newEmployeeFragment_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.SB.shreeboutique.ui.fragment.employees.UpdateFragment"
+        android:label="fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+        <argument
+            android:name="employee"
+            app:argType="com.SB.shreeboutique.db.Employee" />
+    </fragment>
+</navigation>

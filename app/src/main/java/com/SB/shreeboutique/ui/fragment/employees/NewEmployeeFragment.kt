@@ -1,4 +1,4 @@
-package com.SB.shreeboutique.ui.fragment
+package com.SB.shreeboutique.ui.fragment.employees
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.SB.shreeboutique.R
 import com.SB.shreeboutique.db.Employee
-import com.SB.shreeboutique.fragm.EmployeeFragment
 import com.SB.shreeboutique.ui.activity.Employees
 import com.SB.shreeboutique.ui.viewmodels.MainViewModel
 import com.google.android.material.button.MaterialButton
@@ -60,8 +60,7 @@ class NewEmployeeFragment : Fragment() {
                         if (salary.isNotEmpty()) {
                             val employee = Employee(0, name, position, salary.toInt(), date)
                             viewModel.insert(employee)
-                            parentFragmentManager.beginTransaction()
-                                .replace(R.id.employee_container, EmployeeFragment()).commit()
+                            Navigation.findNavController(view).navigate(R.id.employeeFragment)
                         } else {
                             et_salary.error = "Please enter a salary!!"
                         }
@@ -76,11 +75,9 @@ class NewEmployeeFragment : Fragment() {
 
         return view
     }
-}
-
-private fun buildMaterialDatePicker(): MaterialDatePicker<Long> {
-    val builder = MaterialDatePicker.Builder.datePicker()
-    builder.setTitleText("Date of Joining")
-    return builder.build()
-
+    private fun buildMaterialDatePicker(): MaterialDatePicker<Long> {
+        val builder = MaterialDatePicker.Builder.datePicker()
+        builder.setTitleText("Date of Joining")
+        return builder.build()
+    }
 }

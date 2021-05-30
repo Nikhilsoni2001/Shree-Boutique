@@ -1,4 +1,4 @@
-package com.SB.shreeboutique.ui.fragment
+package com.SB.shreeboutique.ui.fragment.customers
 
 import android.os.Bundle
 import android.view.LayoutInflater

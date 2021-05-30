@@ -3,7 +3,7 @@ package com.SB.shreeboutique.ui.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.SB.shreeboutique.R
-import com.SB.shreeboutique.ui.fragment.CustomerListFragment
+import com.SB.shreeboutique.ui.fragment.customers.CustomerListFragment
 
 class Customer : AppCompatActivity() {
 

@@ -1,23 +1,18 @@
-package com.SB.shreeboutique.fragm
+package com.SB.shreeboutique.ui.fragment.employees
 
-import android.app.AlertDialog
-import android.app.Dialog
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.SB.shreeboutique.R
 import com.SB.shreeboutique.ui.activity.Employees
 import com.SB.shreeboutique.ui.adapters.EmployeesAdapter
-import com.SB.shreeboutique.ui.fragment.NewEmployeeFragment
 import com.SB.shreeboutique.ui.viewmodels.MainViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -35,6 +30,13 @@ class EmployeeFragment : Fragment(R.layout.fragment_employee) {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_employee, container, false)
         initialization(view)
+
+        employeesAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply {
+                putSerializable("employee", it)
+            }
+            findNavController().navigate(R.id.action_employeeFragment_to_updateFragment, bundle)
+        }
 
         rv_employee.apply {
             adapter = employeesAdapter
@@ -64,7 +66,7 @@ class EmployeeFragment : Fragment(R.layout.fragment_employee) {
                     rv_employee,
                     "${employee.name} Deleted Successfully!!",
                     Snackbar.LENGTH_LONG
-                ).setAction("Undo", { viewModel.insert(employee) }).show()
+                ).setAction("Undo") { viewModel.insert(employee) }.show()
 
             }
         }
@@ -72,8 +74,7 @@ class EmployeeFragment : Fragment(R.layout.fragment_employee) {
         ItemTouchHelper(itemTouchHelper).attachToRecyclerView(rv_employee)
 
         fabEmployee.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.employee_container, NewEmployeeFragment()).commit()
+            findNavController().navigate(R.id.action_employeeFragment_to_newEmployeeFragment)
         }
         return view
 

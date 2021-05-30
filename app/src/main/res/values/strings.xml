@@ -50,5 +50,7 @@
     <string name="add">Add</string>
     <string name="salary">Salary</string>
     <string name="position">Position</string>
+    <string name="update_employee">Update Employee</string>
+    <string name="update">Update</string>
 
 </resources>

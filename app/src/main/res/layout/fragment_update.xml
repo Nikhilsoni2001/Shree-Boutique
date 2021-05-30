@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical"
-    tools:context=".ui.fragment.employees.NewEmployeeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.employees.UpdateFragment">
+
 
     <TextView
-        android:id="@+id/tv_newEmployee"
+        android:id="@+id/tv_updateEmployee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ubuntu_medium"
         android:padding="12dp"
-        android:text="@string/new_employee"
+        android:text="@string/update_employee"
         android:textAlignment="center"
         android:textColor="@color/main_color"
         android:textSize="30sp"
@@ -79,7 +78,7 @@
         android:textColor="@color/main_color"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_newEmployee" />
+        app:layout_constraintTop_toBottomOf="@id/tv_updateEmployee" />
 
     <EditText
         android:id="@+id/et_name"
@@ -92,14 +91,14 @@
         android:textSize="18sp"
         app:layout_constraintLeft_toRightOf="@id/tv_name"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_newEmployee" />
+        app:layout_constraintTop_toBottomOf="@id/tv_updateEmployee" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_addEmployee"
+        android:id="@+id/btn_updateEmployee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
-        android:text="@string/add"
+        android:text="@string/update"
         app:backgroundTint="@color/main_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,5 +157,6 @@
         app:layout_constraintLeft_toRightOf="@id/tv_Salary"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_Date" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.SB.shreeboutique.ui.fragment
+package com.SB.shreeboutique.ui.fragment.bookings
 
 import android.content.Intent
 import android.os.Bundle
