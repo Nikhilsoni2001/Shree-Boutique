@@ -30,7 +30,7 @@ class CustomerListFragment : Fragment(R.layout.fragment_customer_list) {
 
 
     private fun initialization(view: View) {
-        fabNewCustomer = view.findViewById(R.id.fabNewCustomers)
+        fabNewCustomer = view.findViewById(R.id.fab_add_customers)
     }
 
 }

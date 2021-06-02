@@ -7,20 +7,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.activity.AddBooking"
     android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/tv_newBooking"
+    <LinearLayout
+        android:id="@+id/new_booking_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/ubuntu_medium"
-        android:padding="12dp"
-        android:text="@string/new_booking"
-        android:textAlignment="center"
-        android:textColor="@color/main_color"
-        android:textSize="30sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/tv_bar_bg">
+
+        <TextView
+            android:id="@+id/tv_newBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="@string/new_booking"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/ib_booking"
@@ -34,7 +44,7 @@
         android:contentDescription="@string/app_name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_newBooking" />
+        app:layout_constraintTop_toBottomOf="@id/new_booking_bar" />
 
     <TextView
         android:id="@+id/tv_note"
@@ -49,24 +59,30 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_Date" />
 
-    <EditText
-        android:id="@+id/et_note"
-        android:layout_width="248dp"
-        android:layout_height="80dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/el_Cnote"
+        style="@style/InputLayoutStyle"
+        android:layout_width="244dp"
+        android:layout_height="90dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/ubuntu_medium"
-        android:hint="@string/additional_note"
-        android:padding="6dp"
-        android:textSize="18sp"
-        android:imeOptions="actionDone"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintHorizontal_bias="0.554"
-        app:layout_constraintLeft_toRightOf="@id/tv_note"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_Dateofdelivery"
-        android:autofillHints="false" />
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_Dateofdelivery"
+        app:layout_constraintTop_toBottomOf="@id/tv_Dateofdelivery">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_Cnote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="false"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu_medium"
+            android:gravity="top|start"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLines="1"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tv_Date"
@@ -85,19 +101,18 @@
         android:id="@+id/ib_datePicker"
         android:layout_width="39dp"
         android:layout_height="41dp"
-        app:iconTint="@null"
-        app:iconPadding="1dp"
-        app:rippleColor="@color/white"
         android:elevation="10dp"
         app:backgroundTint="@color/main_color"
-        app:iconGravity="textStart"
         app:icon="@drawable/ic_baseline_calendar_today_24"
-        app:layout_constraintBottom_toTopOf="@id/et_note"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintLeft_toRightOf="@id/tv_Dateofdelivery"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_Cname"
-        app:layout_constraintVertical_bias="0.491" />
+        app:iconGravity="textStart"
+        app:iconPadding="1dp"
+        app:iconTint="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_Dateofdelivery"
+        app:layout_constraintEnd_toEndOf="@+id/el_Cname"
+        app:layout_constraintStart_toEndOf="@+id/tv_Dateofdelivery"
+        app:layout_constraintTop_toTopOf="@+id/tv_Dateofdelivery"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="@color/white" />
 
     <TextView
         android:id="@+id/tv_Dateofdelivery"
@@ -106,12 +121,11 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/ubuntu_medium"
         android:hint="@string/dateformat"
+        android:textColor="@color/main_color"
         android:padding="6dp"
         android:textSize="18sp"
-        app:layout_constraintHorizontal_bias="0.368"
-        app:layout_constraintLeft_toRightOf="@id/tv_Date"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_Cname" />
+        app:layout_constraintLeft_toLeftOf="@id/el_Cname"
+        app:layout_constraintTop_toBottomOf="@id/el_Cname" />
 
     <TextView
         android:id="@+id/tv_Cname"
@@ -126,32 +140,40 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ib_booking" />
 
-    <EditText
-        android:id="@+id/et_Cname"
-        android:layout_width="248dp"
-        android:layout_height="40dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/el_Cname"
+        style="@style/InputLayoutStyle"
+        android:layout_width="244dp"
+        android:layout_height="65dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/ubuntu_medium"
-        android:hint="@string/customer_name"
-        android:padding="6dp"
-        android:textSize="18sp"
-        android:imeOptions="actionNext"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toRightOf="@id/tv_Cname"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ib_booking"
-        android:autofillHints="false"
-        android:inputType="textPersonName" />
+        app:layout_constraintTop_toBottomOf="@id/ib_booking">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_Cname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="false"
+            android:fontFamily="@font/ubuntu_medium"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/book"
         app:backgroundTint="@color/main_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_note"
         app:layout_constraintVertical_bias="0.88" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

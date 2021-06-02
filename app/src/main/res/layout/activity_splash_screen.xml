@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.SplashScreen">
+    tools:context=".ui.activity.SplashScreen"
+    android:background="#1E2021">
 
-    <com.airbnb.lottie.LottieAnimationView
+    <ImageView
         android:id="@+id/splashlogo"
-        android:layout_width="match_parent"
-        android:layout_height="400sp"
-        app:layout_constraintBottom_toTopOf="@id/app_name_splash"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="false"
-        app:lottie_rawRes="@raw/splashlogo"
-        app:lottie_speed="1.5" />
+        android:layout_width="260dp"
+        android:layout_height="250dp"
+        android:src="@mipmap/shreeboutique_logo"
+        app:layout_constraintBottom_toTopOf="@+id/app_name_splash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/app_name_splash"
@@ -33,4 +32,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/splashlogo" />
 
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:indeterminateTint="@color/main_color"
+        app:layout_constraintTop_toBottomOf="@id/app_name_splash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

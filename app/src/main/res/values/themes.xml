@@ -32,7 +32,7 @@
     </style>
 
     <style name="CustomTextStyle" parent="Widget.AppCompat.TextView">
-        <item name="android:textColor">@color/main_color</item>
+        <item name="android:textColor">@color/bg_color</item>
         <item name="android:textSize">26sp</item>
     </style>
 

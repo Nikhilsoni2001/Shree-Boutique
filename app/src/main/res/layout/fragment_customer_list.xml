@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,61 +8,70 @@
     tools:context=".ui.fragment.customers.CustomerListFragment">
 
     <LinearLayout
-        android:id="@+id/hasCustomers"
+            android:id="@+id/customers_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/tv_bar_bg">
+
+            <TextView
+                android:id="@+id/tv_customers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/customers"
+                android:textSize="26sp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                app:layout_constraintTop_toTopOf="@id/bookings_bar"
+                app:layout_constraintLeft_toLeftOf="@id/bookings_bar"
+                app:layout_constraintRight_toRightOf="@id/bookings_bar" />
+
+        </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_customers"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/customers"
-            android:textColor="@color/main_color"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerOrderHistory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:padding="4dp" />
-    </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/rlNoOrders"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="visible">
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customers_bar"
+        tools:itemCount="3"
+        tools:listitem="@layout/employees_rv_layout" />
 
 
-        <TextView
+    <TextView
+            android:id="@+id/no_data_customers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:padding="10dp"
-            android:text="@string/no_customers"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="visible"
+            android:text="@string/no_data_available"
             android:textColor="@color/main_color"
-            android:textSize="16sp" />
-
-    </RelativeLayout>
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabNewCustomers"
+        android:id="@+id/fab_add_customers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
         android:src="@drawable/ic_baseline_add_24"
-        app:backgroundTint="@color/main_color" />
+        android:backgroundTint="@color/main_color"
+        app:tint="@color/white"
+        android:layout_margin="6dp"
+        android:elevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:contentDescription="@string/app_name" />
 
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

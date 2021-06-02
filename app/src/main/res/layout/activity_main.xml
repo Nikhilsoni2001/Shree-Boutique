@@ -4,80 +4,152 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.activity.MainActivity">
-
-    <ImageView
+    <LinearLayout
+        android:id="@+id/app_name_bar"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:scaleType="fitXY"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_wavetop"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/tv_bar_bg">
 
-    <TextView
-        android:id="@+id/app_name"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/dashboard_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/ubuntu_bold"
+            android:includeFontPadding="true"
+            android:text="@string/dashboard"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bookings_dash"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:fontFamily="@font/ubuntu_bold"
-        android:includeFontPadding="true"
-        android:text="@string/app_name"
-        android:textColor="@color/white"
-        android:textSize="26sp"
-        android:paddingTop="12dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="12dp"
+        android:background="@drawable/rv_bg_shape"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        app:layout_constraintBottom_toTopOf="@id/btnCustomers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_name_bar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_bookings"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:elevation="12dp"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            tools:itemCount="9"
+            tools:listitem="@layout/dash_booking_layout"/>
+    </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnCustomers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         style="@style/MaterialButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
+        app:icon="@drawable/ic_person2"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:iconSize="45dp"
         android:text="@string/customers"
         app:layout_constraintBottom_toTopOf="@id/btnBookings"
         app:layout_constraintEnd_toEndOf="@+id/btnBookings"
+        app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="@+id/btnBookings"
-        app:layout_constraintTop_toBottomOf="@id/app_name" />
+        app:layout_constraintTop_toBottomOf="@id/ll_bookings_dash" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBookings"
-        android:layout_width="128dp"
-        android:layout_height="71dp"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
         style="@style/MaterialButtonStyle"
         android:text="@string/bookings"
+        app:icon="@drawable/ic_dress"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:iconSize="38dp"
         app:layout_constraintBottom_toTopOf="@id/btnEmployees"
-        app:layout_constraintEnd_toEndOf="@+id/btnEmployees"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/btnEmployees"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnCustomers" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnEmployees"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
         style="@style/MaterialButtonStyle"
         android:text="@string/employees"
+        app:icon="@drawable/ic_employee"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:iconSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnBookings" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/expanded_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:elevation="6dp"
+        android:clickable="true"
+        android:focusable="true"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_wavebase"
-        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="@color/white"
+        app:backgroundTint="@color/main_color"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnEmployees"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_booking_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tooltipText="Create Booking"
+        app:srcCompat="@drawable/ic_pen"
+        app:tint="@color/white"
+        app:backgroundTint="@color/bg_color"
+        app:layout_constraintBottom_toTopOf="@id/expanded_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="6dp"
+        app:elevation="6dp"
+        android:visibility="invisible"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_customer_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tooltipText="Add New Customer"
+        app:srcCompat="@drawable/ic_add_person"
+        app:tint="@color/white"
+        app:backgroundTint="@color/bg_color"
+        app:layout_constraintBottom_toTopOf="@id/create_booking_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="6dp"
+        android:visibility="invisible"
+        app:elevation="6dp"
+        android:clickable="true"
+        android:focusable="true" />
 </androidx.constraintlayout.widget.ConstraintLayout>
