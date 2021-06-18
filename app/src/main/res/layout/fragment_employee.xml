@@ -31,8 +31,6 @@
             app:layout_constraintRight_toRightOf="parent" />
     </LinearLayout>
 
-
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_employee"
         android:layout_width="match_parent"

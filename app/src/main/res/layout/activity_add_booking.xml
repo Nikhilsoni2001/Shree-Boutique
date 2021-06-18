@@ -38,36 +38,31 @@
         android:layout_height="260dp"
         android:layout_marginTop="26dp"
         android:elevation="16dp"
-        android:scaleType="fitXY"
+        android:scaleType="centerInside"
+        android:backgroundTint="@color/white"
         android:src="@drawable/ic_camera"
+        android:textColor="@color/main_color"
         android:adjustViewBounds="true"
         android:contentDescription="@string/app_name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/new_booking_bar" />
 
-    <TextView
-        android:id="@+id/tv_note"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/ubuntu_medium"
-        android:text="@string/note"
-        android:textColor="@color/main_color"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_Date" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/el_Cnote"
         style="@style/InputLayoutStyle"
-        android:layout_width="244dp"
-        android:layout_height="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
+        android:hint="@string/additonal_information"
+        app:boxCornerRadiusBottomStart="6dp"
+        app:boxCornerRadiusBottomEnd="6dp"
+        app:boxCornerRadiusTopEnd="6dp"
+        app:boxCornerRadiusTopStart="6dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="@id/tv_Dateofdelivery"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_Dateofdelivery">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -80,27 +75,14 @@
             android:gravity="top|start"
             android:imeOptions="actionDone"
             android:inputType="textMultiLine"
-            android:maxLines="1"
+            android:maxLines="20"
             android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tv_Date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/ubuntu_medium"
-        android:text="@string/date"
-        android:textColor="@color/main_color"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_Cname" />
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/ib_datePicker"
-        android:layout_width="39dp"
-        android:layout_height="41dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:elevation="10dp"
         app:backgroundTint="@color/main_color"
         app:icon="@drawable/ic_baseline_calendar_today_24"
@@ -109,6 +91,7 @@
         app:iconTint="@null"
         app:layout_constraintBottom_toBottomOf="@+id/tv_Dateofdelivery"
         app:layout_constraintEnd_toEndOf="@+id/el_Cname"
+        app:layout_constraintHorizontal_bias="0.982"
         app:layout_constraintStart_toEndOf="@+id/tv_Dateofdelivery"
         app:layout_constraintTop_toTopOf="@+id/tv_Dateofdelivery"
         app:layout_constraintVertical_bias="0.0"
@@ -116,39 +99,33 @@
 
     <TextView
         android:id="@+id/tv_Dateofdelivery"
-        android:layout_width="201dp"
-        android:layout_height="40dp"
+        android:layout_width="310dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/ubuntu_medium"
-        android:hint="@string/dateformat"
-        android:textColor="@color/main_color"
+        android:gravity="center_vertical"
+        android:hint="@string/dateofdelivery"
         android:padding="6dp"
-        android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="@id/el_Cname"
-        app:layout_constraintTop_toBottomOf="@id/el_Cname" />
-
-    <TextView
-        android:id="@+id/tv_Cname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="26dp"
-        android:fontFamily="@font/ubuntu_medium"
-        android:text="@string/name"
         android:textColor="@color/main_color"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ib_booking" />
+        android:textColorHint="@color/tv_hintcolour"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/el_Cname" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/el_Cname"
         style="@style/InputLayoutStyle"
-        android:layout_width="244dp"
+        android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
+        android:hint="@string/customer_name"
+        app:boxCornerRadiusBottomStart="6dp"
+        app:boxCornerRadiusBottomEnd="6dp"
+        app:boxCornerRadiusTopEnd="6dp"
+        app:boxCornerRadiusTopStart="6dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/tv_Cname"
         app:layout_constraintTop_toBottomOf="@id/ib_booking">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -165,11 +142,12 @@
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/book"
+        android:textAllCaps="false"
         app:backgroundTint="@color/main_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

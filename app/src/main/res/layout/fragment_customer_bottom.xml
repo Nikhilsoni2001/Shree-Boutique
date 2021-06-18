@@ -17,14 +17,14 @@
             android:id="@+id/iv_back"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:src="@drawable/ic_back"
             android:layout_marginStart="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/tv_length"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_salwarPlazo"
             app:layout_constraintEnd_toStartOf="@+id/tv_salwarPlazo"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.41000003"
+            app:layout_constraintTop_toTopOf="@+id/tv_salwarPlazo"
             app:tint="@color/main_color" />
 
         <TextView
@@ -40,31 +40,24 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
 
-        <TextView
-            android:id="@+id/tv_length"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="38dp"
-            android:includeFontPadding="false"
-            android:text="@string/length"
-            android:fontFamily="@font/ubuntu_bold"
-            android:textSize="24sp"
-            android:textColor="@color/main_color"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_salwarPlazo"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/el_length"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/el_length"
             style="@style/InputLayoutStyle"
-            android:layout_width="201dp"
+            android:layout_width="match_parent"
             android:layout_height="69dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintHorizontal_bias="0.94"
-            app:layout_constraintLeft_toRightOf="@id/tv_length"
-            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="@string/length"
+            app:boxCornerRadiusBottomEnd="6dp"
+            app:boxCornerRadiusBottomStart="6dp"
+            app:boxCornerRadiusTopEnd="6dp"
+            app:boxCornerRadiusTopStart="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/el_pauncha"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_salwarPlazo">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -81,32 +74,23 @@
                 android:textSize="24sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/tv_pauncha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="55dp"
-            android:fontFamily="@font/ubuntu_bold"
-            android:includeFontPadding="false"
-            android:text="@string/pauncha"
-            android:textColor="@color/main_color"
-            android:textSize="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/el_pauncha"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_length" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/el_pauncha"
             style="@style/InputLayoutStyle"
-            android:layout_width="201dp"
+            android:layout_width="match_parent"
             android:layout_height="69dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintHorizontal_bias="0.94"
-            app:layout_constraintLeft_toRightOf="@id/tv_pauncha"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/el_length">
+            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="@string/pauncha"
+            app:boxCornerRadiusBottomEnd="6dp"
+            app:boxCornerRadiusBottomStart="6dp"
+            app:boxCornerRadiusTopEnd="6dp"
+            app:boxCornerRadiusTopStart="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/el_assan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_pauncha"
@@ -122,32 +106,23 @@
                 android:textSize="24sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/tv_assan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="58dp"
-            android:fontFamily="@font/ubuntu_bold"
-            android:includeFontPadding="false"
-            android:text="@string/assan"
-            android:textColor="@color/main_color"
-            android:textSize="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/el_assan"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_pauncha" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/el_assan"
             style="@style/InputLayoutStyle"
-            android:layout_width="201dp"
+            android:layout_width="match_parent"
             android:layout_height="69dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintHorizontal_bias="0.94"
-            app:layout_constraintLeft_toRightOf="@id/tv_assan"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/el_pauncha">
+            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="@string/assan"
+            app:boxCornerRadiusBottomEnd="6dp"
+            app:boxCornerRadiusBottomStart="6dp"
+            app:boxCornerRadiusTopEnd="6dp"
+            app:boxCornerRadiusTopStart="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/el_belt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_assan"
@@ -163,33 +138,23 @@
                 android:textSize="24sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/tv_belt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="48dp"
-            android:fontFamily="@font/ubuntu_bold"
-            android:includeFontPadding="false"
-            android:text="@string/belt"
-            android:textColor="@color/main_color"
-            android:textSize="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/el_belt"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_assan" />
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/el_belt"
             style="@style/InputLayoutStyle"
-            android:layout_width="201dp"
+            android:layout_width="match_parent"
             android:layout_height="69dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintHorizontal_bias="0.94"
-            app:layout_constraintLeft_toRightOf="@id/tv_belt"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/el_assan">
+            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="@string/belt"
+            app:boxCornerRadiusBottomEnd="6dp"
+            app:boxCornerRadiusBottomStart="6dp"
+            app:boxCornerRadiusTopEnd="6dp"
+            app:boxCornerRadiusTopStart="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/el_thies"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_belt"
@@ -205,31 +170,22 @@
                 android:textSize="24sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/tv_thies"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="58dp"
-            android:fontFamily="@font/ubuntu_bold"
-            android:includeFontPadding="false"
-            android:text="@string/thies"
-            android:textColor="@color/main_color"
-            android:textSize="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/el_thies"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_belt" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/el_thies"
             style="@style/InputLayoutStyle"
-            android:layout_width="201dp"
+            android:layout_width="match_parent"
             android:layout_height="69dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintHorizontal_bias="0.94"
-            app:layout_constraintLeft_toRightOf="@id/tv_thies"
-            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/thies"
+            app:boxCornerRadiusBottomEnd="6dp"
+            app:boxCornerRadiusBottomStart="6dp"
+            app:boxCornerRadiusTopEnd="6dp"
+            app:boxCornerRadiusTopStart="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/el_belt">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -254,10 +210,11 @@
         style="@style/MaterialButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
         android:text="@string/save"
-        android:layout_gravity="bottom"/>
+        android:textAllCaps="false" />
 
 </LinearLayout>

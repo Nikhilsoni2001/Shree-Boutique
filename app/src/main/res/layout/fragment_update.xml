@@ -30,174 +30,140 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/el_name"
+        style="@style/InputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/employee_name"
+        app:boxCornerRadiusBottomEnd="6dp"
+        app:boxCornerRadiusBottomStart="6dp"
+        app:boxCornerRadiusTopEnd="6dp"
+        app:boxCornerRadiusTopStart="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_employee_bar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="false"
             android:fontFamily="@font/ubuntu_medium"
-            android:text="@string/name"
-            android:textColor="@color/main_color"
-            android:textSize="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/new_employee_bar" />
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/el_name"
-            style="@style/InputLayoutStyle"
-            android:layout_width="244dp"
-            android:layout_height="65dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/tv_name"
-            app:layout_constraintTop_toBottomOf="@+id/new_employee_bar">
+    <TextView
+        android:id="@+id/tv_Date"
+        android:layout_width="291dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center_vertical"
+        android:hint="@string/dateofjoining"
+        android:padding="6dp"
+        android:textColor="@color/main_color"
+        android:textColorHint="@color/tv_hintcolour"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/el_position"
+        app:layout_constraintEnd_toStartOf="@+id/btn_datePicker"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_name"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autofillHints="false"
-                android:fontFamily="@font/ubuntu_medium"
-                android:imeOptions="actionNext"
-                android:inputType="text"
-                android:maxLines="1"
-                android:textSize="18sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_datePicker"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="10dp"
+        app:backgroundTint="@color/main_color"
+        app:icon="@drawable/ic_baseline_calendar_today_24"
+        app:iconGravity="textStart"
+        app:iconPadding="1dp"
+        app:iconTint="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_Date"
+        app:rippleColor="@color/white" />
 
-        <TextView
-            android:id="@+id/tv_Date2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="44dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/el_position"
+        style="@style/InputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/position"
+        app:boxCornerRadiusBottomEnd="6dp"
+        app:boxCornerRadiusBottomStart="6dp"
+        app:boxCornerRadiusTopEnd="6dp"
+        app:boxCornerRadiusTopStart="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/el_salary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_position"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="false"
             android:fontFamily="@font/ubuntu_medium"
-            android:text="@string/date"
-            android:textColor="@color/main_color"
-            android:textSize="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/tv_Date"
-            android:layout_width="201dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="73dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginBottom="12dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/el_salary"
+        style="@style/InputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/salary"
+        app:boxCornerRadiusBottomEnd="6dp"
+        app:boxCornerRadiusBottomStart="6dp"
+        app:boxCornerRadiusTopEnd="6dp"
+        app:boxCornerRadiusTopStart="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/el_position">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_salary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="false"
             android:fontFamily="@font/ubuntu_medium"
-            android:textColor="@color/main_color"
-            android:hint="@string/dd_mm_yyyy"
-            android:gravity="center"
-            android:padding="6dp"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/el_position"
-            app:layout_constraintRight_toLeftOf="@id/btn_datePicker"
-            app:layout_constraintStart_toEndOf="@+id/tv_Date2"
-            app:layout_constraintTop_toBottomOf="@id/el_name"
-            app:layout_constraintVertical_bias="0.35000002" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_datePicker"
-            android:layout_width="39dp"
-            android:layout_height="41dp"
-            android:layout_marginEnd="20dp"
-            android:elevation="10dp"
-            app:backgroundTint="@color/main_color"
-            app:icon="@drawable/ic_baseline_calendar_today_24"
-            app:iconGravity="textStart"
-            app:iconPadding="1dp"
-            app:iconTint="@null"
-            app:layout_constraintBottom_toTopOf="@+id/el_position"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/tv_Date"
-            app:layout_constraintTop_toBottomOf="@id/el_name"
-            app:layout_constraintVertical_bias="0.6"
-            app:rippleColor="@color/white" />
-
-        <TextView
-            android:id="@+id/tv_position"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="36dp"
-            android:fontFamily="@font/ubuntu_medium"
-            android:text="@string/position"
-            android:textColor="@color/main_color"
-            android:textSize="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_Date2" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/el_position"
-            style="@style/InputLayoutStyle"
-            android:layout_width="244dp"
-            android:layout_height="65dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/tv_Salary"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_Date" >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_position"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autofillHints="false"
-                android:fontFamily="@font/ubuntu_medium"
-                android:imeOptions="actionNext"
-                android:inputType="text"
-                android:maxLines="1"
-                android:textSize="18sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/tv_Salary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="44dp"
-            android:fontFamily="@font/ubuntu_medium"
-            android:text="@string/salary"
-            android:textColor="@color/main_color"
-            android:textSize="24sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_position" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/el_salary"
-            style="@style/InputLayoutStyle"
-            android:layout_width="244dp"
-            android:layout_height="65dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/tv_Salary"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/el_position" >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_salary"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autofillHints="false"
-                android:fontFamily="@font/ubuntu_medium"
-                android:imeOptions="actionDone"
-                android:inputType="number"
-                android:maxLines="1"
-                android:textSize="18sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_updateEmployee"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
         android:text="@string/update"
+        android:textAllCaps="false"
         app:backgroundTint="@color/main_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
